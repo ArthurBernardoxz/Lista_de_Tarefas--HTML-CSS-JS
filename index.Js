@@ -1,8 +1,11 @@
 let botao_pronto;
 let botao_excluir;
+let lista_Tarefas;
 Botao_ADD = document.querySelector("#add");
 
 Botao_ADD.addEventListener('click', adicionar_Tarefa);
+
+Carregar(lista_Tarefas);
 
 function adicionar_Tarefa() {
     Tarefa_ADD = document.querySelector("#Input_Tarefas").value;
@@ -19,7 +22,6 @@ function adicionar_Tarefa() {
     botao_tirar_tarefa.classList.add("botoes");
     botao_tirar_tarefa.classList.add("excluir");
 
-    lista_Tarefas = document.querySelector("#tarefas_add");
     novo_li = document.createElement('li');
 
     novo_li.innerHTML = "📌"+ Tarefa_ADD + " " + " " + " ";
@@ -34,6 +36,8 @@ function adicionar_Tarefa() {
     for(i = 0; i < botao_pronto.length; i++){
         botao_excluir[i].addEventListener('click', Excluir_Tarefa);
     }
+
+    Salvar(lista_Tarefas.innerHTML);
 }
 
 
@@ -46,4 +50,13 @@ function Tarefa_Feita(e) {
 function Excluir_Tarefa(e) {
     botao_selecionado = e.currentTarget;
     botao_selecionado.parentNode.remove(botao_selecionado.parentNode);
+}
+
+function Salvar(lista) {
+    sessionStorage.setItem('tarefas', lista);
+}
+
+function Carregar(lista) {
+    lista = sessionStorage.getItem('tarefas');
+    console.log(lista);
 }
