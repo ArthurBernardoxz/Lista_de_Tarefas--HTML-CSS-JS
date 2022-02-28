@@ -66,12 +66,12 @@ function Excluir_Tarefa(e) { // funcao para excluir a tarefa
     Salvar(lista_Tarefas.innerHTML); // salva a lista
 }
 
-function Salvar(lista) { // funcao para salvar a lista no sessionstorage
-    sessionStorage.setItem('tarefas', lista); //coloca em tarefas a lista com as <li> no sessionstorage
+function Salvar(lista) { // funcao para salvar a lista no localStorage
+    localStorage.setItem('tarefas', lista); //coloca em tarefas a lista com as <li> no localStorage
 }
 
 function Carregar(lista) { //funcao para carregar as tarefas salvas
-    lista.innerHTML = sessionStorage.getItem('tarefas'); // a lista no HTML recebe as tarefas salvas no sessionstorage
+    lista.innerHTML = localStorage.getItem('tarefas'); // a lista no HTML recebe as tarefas salvas no localStorage
     botao_tarefa_feita = document.querySelectorAll('.pronto'); //pega novamente os botoes que possuem a classe pronto 
     botao_tirar_tarefa = document.querySelectorAll('.excluir'); //pega novamente os botoes que possuem a classe excluir
     for(i = 0; i < botao_tarefa_feita.length; i++){ // atribui eventos aos botoes para tarefas feitas
