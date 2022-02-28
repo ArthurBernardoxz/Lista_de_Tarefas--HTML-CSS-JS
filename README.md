@@ -70,19 +70,5 @@ function Salvar(lista) { // funcao para salvar a lista no localStorage
 
 ### Carregar as Tarefas: ###
 
-Atribuindo a `div` com o `innerHTML` o `localStorage.getItem(''tarefas)`. Tive alguns problemas com os botões de **pronto** e **excluir** e os peguei de novo utilizando `document.querySelectorAll` e usei `for` para ligar cada botão as funções de **Tarefa_Feita** e **Excluir_Tarefa**, assim:
-
-```
-function Carregar(lista) { //funcao para carregar as tarefas salvas
-    lista.innerHTML = localStorage.getItem('tarefas'); // a lista no HTML recebe as tarefas salvas no localStorage
-    botao_tarefa_feita = document.querySelectorAll('.pronto'); //pega novamente os botoes que possuem a classe pronto 
-    botao_tirar_tarefa = document.querySelectorAll('.excluir'); //pega novamente os botoes que possuem a classe excluir
-    for(i = 0; i < botao_tarefa_feita.length; i++){ // atribui eventos aos botoes para tarefas feitas
-        botao_tarefa_feita[i].addEventListener('click', Tarefa_Feita);
-    }
-    for(i = 0; i < botao_tarefa_feita.length; i++){ // atribui eventos aos botoes para excluir tarefas
-        botao_tirar_tarefa[i].addEventListener('click', Excluir_Tarefa);
-    }
-}
-```
+Atribuindo a `div` com o `innerHTML` o `localStorage.getItem(''tarefas)`. Tive alguns problemas com os botões de **pronto** e **excluir** e os peguei de novo utilizando `document.querySelectorAll` e usei `for` para ligar cada botão as funções de **Tarefa_Feita** e **Excluir_Tarefa**.
 
