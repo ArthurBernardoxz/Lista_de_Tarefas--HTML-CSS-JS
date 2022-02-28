@@ -42,6 +42,23 @@ Ao final pego todos os botões de `class` **pronto** utilizando um `document.que
 
 ### Excluir Tarefas: ###
 
+Utilizando o `currentTarget` pego em qual dos botões com `class` **excluir** foi pressionado para excluir o `li` (tarefa) naquela posição utilizando o `parentNode.remove` do `parentNode.remove` do botão que foi selecionado da seguinte forma:
+
+```
+function Excluir_Tarefa(e) { // funcao para excluir a tarefa
+    botao_selecionado = e.currentTarget; // pega qual botao foi selecionado
+    botao_selecionado.parentNode.remove(botao_selecionado.parentNode); // remove o <li> que teve o botao pressionado
+    Salvar(lista_Tarefas.innerHTML); // salva a lista
+}
+```
+
+### Excluir Tarefas: ###
+
+Utilizando o `currentTarget` pego em qual dos botões com `class` **pronto** foi pressionado para marcar o `li` (tarefa) naquela posição como feito.
+
+Para isso atráves do `class.list.toggle("riscado")` que no CSS define que deixa os elementos com essa `class` ~~riscados~~.
+
+### Salvar as Tarefas: ###
 
 
 
