@@ -28,7 +28,10 @@ Para saber mais acesse o arquivo **index.css** acredito que está bem simples e 
 
 ## Como você fez funcionar e qual foi a lógica? (Js) ##
 
-### Adicionar Tarefas ###
+### Adicionar Tarefas: ###
 
+Criei uma váriavel para receber o botão **ADD**(para adicionar tarefas) e adicionei um evento nele de `click` e o vinculei a função **adicionar_Tarefa**.
+
+Já dentor da função criei uma váriavel chamada **Tarefa_ADD** que receberia o nome da tarefa digitada pelo usuário dentro do `input`, logo em seguida utilizei um `if` para verificar se o usuário está tentando adicionar uma tarefa sem nome, que mostra ao usuário um `window.alert` dizendo que não é póssivel adicionar uma tarefa sem nome.
 
 
