@@ -38,7 +38,7 @@ Ainda na função criei dois botões atráves do `document.createElement('button
 
 Depois criei um `li` que receberia no `innerHTML` o valor o nome da tarefa e utilizando o `appendChild` adicionaria os botões de pronto e excluir que seriam utilizados depois, também utilizando o `appendChild` o `li` seria adicionado naquele `ul` que estava vazio.
 
-Ao final pego todos os botões de `class` **pronto** utilizando um `document.querySelectorAll('.pronto')` e adiciono um callback neles para ligar a função **Tarefa_feita**, fiz o mesmo com os botões de `class` **excluir** e os liguei da mesma forma a função **Excluir_Tarefa**, por último salvo a lista de tarefas (a `div` no **LocalStorage**) para quando o site for aberto novamente consiga pegar as tarefas adicionadas pelo usuário anteriormente.
+Ao final pego todos os botões de `class` **pronto** utilizando um `document.querySelectorAll('.pronto')` e utilizando um for adicionei um callback neles para ligar a função **Tarefa_feita**, fiz o mesmo com os botões de `class` **excluir** e os liguei da mesma forma a função **Excluir_Tarefa**, por último salvo a lista de tarefas (a `div` no **LocalStorage**) para quando o site for aberto novamente consiga pegar as tarefas adicionadas pelo usuário anteriormente.
 
 ### Excluir Tarefas: ###
 
@@ -60,5 +60,29 @@ Para isso atráves do `class.list.toggle("riscado")` que no CSS define que deixa
 
 ### Salvar as Tarefas: ###
 
+Foi bem simples utilizei o `localStorage.setItem('tarefas', lista)` onde lista é a `div` que contem as tarefas, assim:
 
+```
+function Salvar(lista) { // funcao para salvar a lista no localStorage
+    localStorage.setItem('tarefas', lista); //coloca em tarefas a lista com as <li> no localStorage
+}
+```
+
+### Carregar as Tarefas: ###
+
+Atribuindo a `div` com o `innerHTML` o `localStorage.getItem(''tarefas)`. Tive alguns problemas com os botões de **pronto** e **excluir** e os peguei de novo utilizando `document.querySelectorAll` e usei `for` para ligar cada botão as funções de **Tarefa_Feita** e **Excluir_Tarefa**, assim:
+
+```
+function Carregar(lista) { //funcao para carregar as tarefas salvas
+    lista.innerHTML = localStorage.getItem('tarefas'); // a lista no HTML recebe as tarefas salvas no localStorage
+    botao_tarefa_feita = document.querySelectorAll('.pronto'); //pega novamente os botoes que possuem a classe pronto 
+    botao_tirar_tarefa = document.querySelectorAll('.excluir'); //pega novamente os botoes que possuem a classe excluir
+    for(i = 0; i < botao_tarefa_feita.length; i++){ // atribui eventos aos botoes para tarefas feitas
+        botao_tarefa_feita[i].addEventListener('click', Tarefa_Feita);
+    }
+    for(i = 0; i < botao_tarefa_feita.length; i++){ // atribui eventos aos botoes para excluir tarefas
+        botao_tirar_tarefa[i].addEventListener('click', Excluir_Tarefa);
+    }
+}
+```
 
