@@ -11,5 +11,22 @@ Utilizei um `<h1>` para colocar o titulo do site, logo depois criei uma `<div>` 
 
 Tentei deixar a aparência do site o mais próximo de uma lista de tarefas feita normalmente em uma folha de papel. 
 
-Primeiro inclui a fonte [**Shizuru**](https://fonts.google.com/specimen/Shizuru?query=Shizuru)
+Primeiro inclui a fonte [**Shizuru**](https://fonts.google.com/specimen/Shizuru?query=Shizuru) utilizando o `@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap')`, logo depois defini o `background-color` do html como `aliceblue` e também a `font-family` como `'Shizuru', cursive`.
+
+Defini o tamanho das fontes e dos outros elementos de forma que ficasse o mais agradavel ao meu ponto de vista e alinhando tudo ao centro da página.
+
+Para deixar a linha horizontal a baixo de cada tarefa mudei as de cada li deixando apenas a `border-bottom` de fora e funcionou da seguinte forma:
+
+```
+border-style: solid;
+border-top: 50px;
+border-right: 50px;
+border-left: 50px;
+```
+
+Para saber mais acesse o arquivo **index.css** acredito que está bem simples e de facil entendimento.
+
+## Como você fez funcionar e qual foi a lógica? (Js) ##
+
+
 
