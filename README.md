@@ -32,6 +32,16 @@ Para saber mais acesse o arquivo **index.css** acredito que está bem simples e 
 
 Criei uma váriavel para receber o botão **ADD**(para adicionar tarefas) e adicionei um evento nele de `click` e o vinculei a função **adicionar_Tarefa**.
 
-Já dentor da função criei uma váriavel chamada **Tarefa_ADD** que receberia o nome da tarefa digitada pelo usuário dentro do `input`, logo em seguida utilizei um `if` para verificar se o usuário está tentando adicionar uma tarefa sem nome, que mostra ao usuário um `window.alert` dizendo que não é póssivel adicionar uma tarefa sem nome.
+Já dentro da função criei uma váriavel chamada **Tarefa_ADD** que receberia o nome da tarefa digitada pelo usuário dentro do `input`, logo em seguida utilizei um `if` para verificar se o usuário está tentando adicionar uma tarefa sem nome, que mostra ao usuário um `window.alert` dizendo que não é póssivel adicionar uma tarefa sem nome. 
+
+Ainda na função criei dois botões atráves do `document.createElement('button')` em ambos coloquei a `class` **botões** para ficar mais fácil de estilizar no CSS, mas em um coloquei o `innerHTML = "✔️"` e a `class` de **pronto** e o outro com o `innerHTML = "🗑️"` e a `class` de **excluir** um seria utilizado para marcar a tarefa como feita e outro para excluir tarefas.
+
+Depois criei um `li` que receberia no `innerHTML` o valor o nome da tarefa e utilizando o `appendChild` adicionaria os botões de pronto e excluir que seriam utilizados depois, também utilizando o `appendChild` o `li` seria adicionado naquele `ul` que estava vazio.
+
+Ao final pego todos os botões de `class` **pronto** utilizando um `document.querySelectorAll('.pronto')` e adiciono um callback neles para ligar a função **Tarefa_feita**, fiz o mesmo com os botões de `class` **excluir** e os liguei da mesma forma a função **Excluir_Tarefa**, por último salvo a lista de tarefas (a `div` no **LocalStorage**) para quando o site for aberto novamente consiga pegar as tarefas adicionadas pelo usuário anteriormente.
+
+### Excluir Tarefas: ###
+
+
 
 
