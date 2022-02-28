@@ -9,3 +9,7 @@ Utilizei um `<h1>` para colocar o titulo do site, logo depois criei uma `<div>` 
 
 ## Como foi feito a estilização? (CSS) ##
 
+Tentei deixar a aparência do site o mais próximo de uma lista de tarefas feita normalmente em uma folha de papel. 
+
+Primeiro inclui a fonte [**Shizuru**](https://fonts.google.com/specimen/Shizuru?query=Shizuru)
+
