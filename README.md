@@ -72,3 +72,4 @@ function Salvar(lista) { // funcao para salvar a lista no localStorage
 
 Atribuindo a `div` com o `innerHTML` o `localStorage.getItem(''tarefas)`. Tive alguns problemas com os botões de **pronto** e **excluir** e os peguei de novo utilizando `document.querySelectorAll` e usei `for` para ligar cada botão as funções de **Tarefa_Feita** e **Excluir_Tarefa**.
 
+E coloquei a chamada da função **carregar** no ínicio do Js para sempre que a página abrir carregar as tarefas.
