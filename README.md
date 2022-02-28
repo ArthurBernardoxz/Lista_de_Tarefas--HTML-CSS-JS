@@ -1,2 +1,2 @@
 # Lista_de_Tarefas--HTML-CSS-JS
- Lista de Tarefas utilizando  CSSm, HTML e CSS
+ Lista de Tarefas utilizando  CSS, HTML e CSS
